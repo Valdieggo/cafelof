@@ -4,9 +4,9 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="Café Lof">
-	<main>
-		<h1>Pronto...<p>Nuevos granos para juntar a la familia</p></h1>
-	</main>
+  <main>
+    <h1>Pronto...<p>Nuevos granos para juntar a la familia</p></h1>
+  </main>
 </Layout>
 
 <style>
@@ -39,14 +39,31 @@ import Card from '../components/Card.astro';
     line-height: 1;
     text-align: center;
     color: #000;
-	opacity: 0.8;
+    opacity: 0.8;
   }
   p {
-	color: #000;
-	font-size: 2rem;
-	font-style: italic;
-	font-weight: 1;
-	opacity: 0.5;
+    color: #000;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 1;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 4rem; /* Ajusta este valor según sea necesario */
+    }
+    p {
+      font-size: 1.5rem; /* Ajusta este valor según sea necesario */
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 3rem; /* Ajusta este valor según sea necesario */
+    }
+    p {
+      font-size: 1.2rem; /* Ajusta este valor según sea necesario */
+    }
   }
 </style>
-
