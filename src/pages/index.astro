@@ -1,11 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Whatsapp from '../components/Whatsapp.astro';
 ---
 
 <Layout title="Café Lof">
   <main>
     <h1>Pronto...<p>Nuevos granos para juntar a la familia</p></h1>
+    <a 
+    href="https://wa.me/c/56975655315" 
+    class="inline-flex items-center justify-center rounded-full bg-[#25D366] px-4 py-4 md:px-6 md:py-4 lg:px-8 lg:py-5 text-white shadow-md transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2">
+    <Whatsapp/>
+    <span class="ml-2 text-sm md:text-base lg:text-lg">¡Haz tu pedido aquí!</span>
+  </a>  
   </main>
 </Layout>
 
@@ -49,21 +56,66 @@ import Card from '../components/Card.astro';
     opacity: 0.5;
   }
 
+  a {
+    padding: 16px;
+    border-radius: 9999px;
+    background-color: #25D366;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+  }
+
+  a:hover {
+    transform: scale(1.05);
+  }
+
+  a svg {
+    height: 24px;
+    width: 24px;
+  }
+
+  a span {
+    margin-left: 8px;
+    font-size: 1rem;
+  }
+
   @media (max-width: 768px) {
     h1 {
-      font-size: 4rem; /* Ajusta este valor según sea necesario */
+      font-size: 4rem; 
     }
     p {
-      font-size: 1.5rem; /* Ajusta este valor según sea necesario */
+      font-size: 1.5rem;
+    }
+    a {
+      padding: 12px;
+    }
+
+    a svg {
+      height: 20px;
+      width: 20px;
+    }
+
+    a span {
+      font-size: 0.875rem;
     }
   }
 
   @media (max-width: 480px) {
     h1 {
-      font-size: 3rem; /* Ajusta este valor según sea necesario */
+      font-size: 3rem; 
     }
     p {
-      font-size: 1.2rem; /* Ajusta este valor según sea necesario */
+      font-size: 1.2rem;
+    }
+    a {
+      padding: 10px;
+    }
+    a span {
+      font-size: 1rem;
     }
   }
 </style>
